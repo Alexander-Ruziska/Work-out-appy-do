@@ -1,0 +1,46 @@
+.week-view {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.day-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.day-tab {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(100, 100, 100, 0.3);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 45px;
+}
+
+.day-tab:hover {
+  border-color: rgba(220, 20, 60, 0.6);
+  color: #ff4444;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+}
+
+.day-tab.active {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.8) 0%, rgba(80, 0, 0, 0.9) 100%);
+  border-color: #ff4444;
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.5), 0 0 20px rgba(220, 20, 60, 0.3);
+  text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}

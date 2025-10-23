@@ -1,0 +1,2792 @@
+{
+  "blocks": [
+    {
+      "name": "Block 1",
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "days": [
+            {
+              "day": "Day 1 - Upper",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB push press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Chest supported DB front raise",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "SA cable lateral raise",
+                  "sets": "3",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Cable rope OH tricep extension",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB low box squat",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "SSB or BB good morning",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Lying leg curls",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "BB/machine hip thrust",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Spanish squat",
+                  "sets": "2",
+                  "reps": "15",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Close grip incline bench press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Supinated lat pulldown",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Seated DB shoulder press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Cable rope tricep extensions",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Overhand EZ curl bicep curls",
+                  "sets": "2",
+                  "reps": "12",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Snatch grip deadlift",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Leg press",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "BB RDL",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "7"
+                },
+                {
+                  "name": "8\" BB step ups",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 2,
+          "days": [
+            {
+              "day": "Day 1 - Upper",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB push press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Chest supported DB front raise",
+                  "sets": "4",
+                  "reps": "8",
+                  "load": "2.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "SA cable lateral raise",
+                  "sets": "3",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope OH tricep extension",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "2.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "6",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB low box squat",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "SSB or BB good morning",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Lying leg curls",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "2.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB/machine hip thrust",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Spanish squat",
+                  "sets": "2",
+                  "reps": "15",
+                  "load": "2.5",
+                  "rpe": ""
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Close grip incline bench press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Supinated lat pulldown",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Seated DB shoulder press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "2.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope tricep extensions",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "2.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Overhand EZ curl bicep curls",
+                  "sets": "2",
+                  "reps": "12",
+                  "load": "2.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Snatch grip deadlift",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Leg press",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB RDL",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "8\" BB step ups",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 3,
+          "days": [
+            {
+              "day": "Day 1 - Upper",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB push press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Chest supported DB front raise",
+                  "sets": "4",
+                  "reps": "8",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "SA cable lateral raise",
+                  "sets": "4",
+                  "reps": "10/side",
+                  "load": "2.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope OH tricep extension",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "7",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB low box squat",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "SSB or BB good morning",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Lying leg curls",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB/machine hip thrust",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Spanish squat",
+                  "sets": "3",
+                  "reps": "15",
+                  "load": "5",
+                  "rpe": ""
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Close grip incline bench press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Supinated lat pulldown",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Seated DB shoulder press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope tricep extensions",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Overhand EZ curl bicep curls",
+                  "sets": "3",
+                  "reps": "12",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "6",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Snatch grip deadlift",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Leg press",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB RDL",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "8\" BB step ups",
+                  "sets": "3",
+                  "reps": "10/side",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 4,
+          "days": [
+            {
+              "day": "Day 1 - Upper",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB push press",
+                  "sets": "4",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Chest supported DB front raise",
+                  "sets": "4",
+                  "reps": "8",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "SA cable lateral raise",
+                  "sets": "4",
+                  "reps": "10/side",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope OH tricep extension",
+                  "sets": "4",
+                  "reps": "10",
+                  "load": "5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "8",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB low box squat",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "SSB or BB good morning",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Lying leg curls",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB/machine hip thrust",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Spanish squat",
+                  "sets": "3",
+                  "reps": "15",
+                  "load": "7.5",
+                  "rpe": ""
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Close grip incline bench press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Supinated lat pulldown",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Seated DB shoulder press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope tricep extensions",
+                  "sets": "4",
+                  "reps": "10",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Overhand EZ curl bicep curls",
+                  "sets": "3",
+                  "reps": "12",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "7",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Snatch grip deadlift",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Leg press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB RDL",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "8\" BB step ups",
+                  "sets": "3",
+                  "reps": "10/side",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 5,
+          "days": [
+            {
+              "day": "Day 1 - Upper",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB push press",
+                  "sets": "4",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Chest supported DB front raise",
+                  "sets": "4",
+                  "reps": "8",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "SA cable lateral raise",
+                  "sets": "4",
+                  "reps": "10/side",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope OH tricep extension",
+                  "sets": "4",
+                  "reps": "10",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "8",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB low box squat",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "SSB or BB good morning",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Lying leg curls",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "10",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB/machine hip thrust",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Spanish squat",
+                  "sets": "3",
+                  "reps": "15",
+                  "load": "10",
+                  "rpe": ""
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Close grip incline bench press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Supinated lat pulldown",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Seated DB shoulder press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "10",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope tricep extensions",
+                  "sets": "4",
+                  "reps": "10",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Overhand EZ curl bicep curls",
+                  "sets": "3",
+                  "reps": "12",
+                  "load": "7.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "8",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Snatch grip deadlift",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Leg press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB RDL",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "8\" BB step ups",
+                  "sets": "3",
+                  "reps": "10/side",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 6,
+          "days": [
+            {
+              "day": "Day 1 - Upper",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB push press",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Chest supported DB front raise",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "5.25",
+                  "rpe": ""
+                },
+                {
+                  "name": "SA cable lateral raise",
+                  "sets": "3",
+                  "reps": "10/side",
+                  "load": "5.25",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope OH tricep extension",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "5.25",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB low box squat",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "SSB or BB good morning",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Lying leg curls",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "7",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB/machine hip thrust",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Spanish squat",
+                  "sets": "2",
+                  "reps": "15",
+                  "load": "7",
+                  "rpe": ""
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Close grip incline bench press",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Supinated lat pulldown",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Seated DB shoulder press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "8",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope tricep extensions",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "6",
+                  "rpe": ""
+                },
+                {
+                  "name": "Overhand EZ curl bicep curls",
+                  "sets": "3",
+                  "reps": "12",
+                  "load": "6",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Snatch grip deadlift",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Leg press",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB RDL",
+                  "sets": "3",
+                  "reps": "10",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "8\" BB step ups",
+                  "sets": "3",
+                  "reps": "10/side",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Block 2",
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "days": [
+            {
+              "day": "Day 1 - Upper November 2",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB strict overhead press",
+                  "sets": "3",
+                  "reps": "5",
+                  "load": "80",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "105",
+                  "rpe": "7"
+                },
+                {
+                  "name": "BB front raise",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "35",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Bentover DB T",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "15",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Cable rope face pull",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "green band",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower November 5",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB squat",
+                  "sets": "2",
+                  "reps": "5",
+                  "load": "175",
+                  "rpe": "7"
+                },
+                {
+                  "name": "BB zombie squat",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "50",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Pin good mornings",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "95",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Heavy sled/car push",
+                  "sets": "4",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "7"
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper November 9",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "12.5",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bench press",
+                  "sets": "3",
+                  "reps": "5",
+                  "load": "125",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Weighted pull up",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "green band toe assist",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Z press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "30",
+                  "rpe": "7"
+                },
+                {
+                  "name": "EZ skull crusher",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "35",
+                  "rpe": "7"
+                },
+                {
+                  "name": "DB hammer curl",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "35",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower November 12",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "35",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deadlift",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "245",
+                  "rpe": "7"
+                },
+                {
+                  "name": "18\" deadlift",
+                  "sets": "2",
+                  "reps": "5",
+                  "load": "225",
+                  "rpe": "7"
+                },
+                {
+                  "name": "Dead hanging",
+                  "sets": "2",
+                  "reps": "45s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "SL glute bridges",
+                  "sets": "3",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "8",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 2,
+          "days": [
+            {
+              "day": "Day 1 - Upper November 14",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB strict overhead press",
+                  "sets": "3",
+                  "reps": "4",
+                  "load": "90",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "110",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB front raise",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "15",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bentover DB T",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "15",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Cable rope face pull",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "7",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower November 16",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB squat",
+                  "sets": "2",
+                  "reps": "5",
+                  "load": "185",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB zombie squat",
+                  "sets": "3",
+                  "reps": "7",
+                  "load": "55",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pin good mornings",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "100",
+                  "rpe": ""
+                },
+                {
+                  "name": "Heavy sled/car push",
+                  "sets": "4",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper November 18",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "12.5",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bench press",
+                  "sets": "3",
+                  "reps": "4",
+                  "load": "130",
+                  "rpe": ""
+                },
+                {
+                  "name": "Weighted pull up",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "#VALUE!",
+                  "rpe": ""
+                },
+                {
+                  "name": "Z press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "35",
+                  "rpe": ""
+                },
+                {
+                  "name": "EZ skull crusher",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "35",
+                  "rpe": "8"
+                },
+                {
+                  "name": "DB hammer curl",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "35",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower November 19",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deadlift",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "255",
+                  "rpe": ""
+                },
+                {
+                  "name": "18\" deadlift",
+                  "sets": "2",
+                  "reps": "4",
+                  "load": "230",
+                  "rpe": ""
+                },
+                {
+                  "name": "Dead hanging",
+                  "sets": "2",
+                  "reps": "45s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "SL glute bridges",
+                  "sets": "3",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "7",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 3,
+          "days": [
+            {
+              "day": "Day 1 - Upper November 26",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "12.5",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB strict overhead press",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "95",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "115",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB front raise",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "35",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bentover DB T",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "20",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Cable rope face pull",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "6",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower November 28",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB squat",
+                  "sets": "2",
+                  "reps": "4",
+                  "load": "195",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB zombie squat",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "60",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pin good mornings",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "105",
+                  "rpe": ""
+                },
+                {
+                  "name": "Heavy sled/car push",
+                  "sets": "4",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper December 3",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bench press",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "135",
+                  "rpe": ""
+                },
+                {
+                  "name": "Weighted pull up",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "#VALUE!",
+                  "rpe": ""
+                },
+                {
+                  "name": "Z press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "36.75",
+                  "rpe": ""
+                },
+                {
+                  "name": "EZ skull crusher",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "DB hammer curl",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower December 6",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "35",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deadlift",
+                  "sets": "3",
+                  "reps": "2",
+                  "load": "265",
+                  "rpe": ""
+                },
+                {
+                  "name": "18\" deadlift",
+                  "sets": "2",
+                  "reps": "3",
+                  "load": "240",
+                  "rpe": ""
+                },
+                {
+                  "name": "Dead hanging",
+                  "sets": "2",
+                  "reps": "45s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "SL glute bridges",
+                  "sets": "3",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "6",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 4,
+          "days": [
+            {
+              "day": "Day 1 - Upper December 10",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB strict overhead press",
+                  "sets": "3",
+                  "reps": "2",
+                  "load": "100",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "115",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB front raise",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bentover DB T",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Cable rope face pull",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower December 14",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB squat",
+                  "sets": "2",
+                  "reps": "3",
+                  "load": "205",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB zombie squat",
+                  "sets": "3",
+                  "reps": "5",
+                  "load": "65",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pin good mornings",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "105",
+                  "rpe": ""
+                },
+                {
+                  "name": "Heavy sled/car push",
+                  "sets": "4",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper December 17",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bench press",
+                  "sets": "3",
+                  "reps": "2",
+                  "load": "145",
+                  "rpe": ""
+                },
+                {
+                  "name": "Weighted pull up",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "#VALUE!",
+                  "rpe": ""
+                },
+                {
+                  "name": "Z press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "38.5875",
+                  "rpe": ""
+                },
+                {
+                  "name": "EZ skull crusher",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "DB hammer curl",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower December 22",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deadlift",
+                  "sets": "3",
+                  "reps": "1",
+                  "load": "275",
+                  "rpe": ""
+                },
+                {
+                  "name": "18\" deadlift",
+                  "sets": "2",
+                  "reps": "3",
+                  "load": "250",
+                  "rpe": ""
+                },
+                {
+                  "name": "Dead hanging",
+                  "sets": "2",
+                  "reps": "45s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "SL glute bridges",
+                  "sets": "3",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 5,
+          "days": [
+            {
+              "day": "Day 1 - Upper December 30",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB strict overhead press",
+                  "sets": "3",
+                  "reps": "2",
+                  "load": "110",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "125",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB front raise",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "9"
+                },
+                {
+                  "name": "Bentover DB T",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "9"
+                },
+                {
+                  "name": "Cable rope face pull",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "9"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower January 2",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB squat",
+                  "sets": "2",
+                  "reps": "2",
+                  "load": "225",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB zombie squat",
+                  "sets": "3",
+                  "reps": "5",
+                  "load": "75",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pin good mornings",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "110",
+                  "rpe": ""
+                },
+                {
+                  "name": "Heavy sled/car push",
+                  "sets": "4",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "9"
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper January 4",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bench press",
+                  "sets": "3",
+                  "reps": "1",
+                  "load": "165",
+                  "rpe": ""
+                },
+                {
+                  "name": "Weighted pull up",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "#VALUE!",
+                  "rpe": ""
+                },
+                {
+                  "name": "Z press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "40.516875",
+                  "rpe": ""
+                },
+                {
+                  "name": "EZ skull crusher",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "",
+                  "rpe": "9"
+                },
+                {
+                  "name": "DB hammer curl",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "9"
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deadlift",
+                  "sets": "1",
+                  "reps": "1",
+                  "load": "300",
+                  "rpe": ""
+                },
+                {
+                  "name": "18\" deadlift",
+                  "sets": "2",
+                  "reps": "3",
+                  "load": "255",
+                  "rpe": ""
+                },
+                {
+                  "name": "Dead hanging",
+                  "sets": "2",
+                  "reps": "45s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "SL glute bridges",
+                  "sets": "3",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "weekNumber": 6,
+          "days": [
+            {
+              "day": "Day 1 - Upper",
+              "exercises": [
+                {
+                  "name": "DB LU raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Bottoms up KB/DB press",
+                  "sets": "2",
+                  "reps": "10/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "BB strict overhead press",
+                  "sets": "2",
+                  "reps": "2",
+                  "load": "77",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pendlay row",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "87.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB front raise",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bentover DB T",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Cable rope face pull",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 2 - Lower",
+              "exercises": [
+                {
+                  "name": "Side plank clam shells",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Bodyweight SL RDL",
+                  "sets": "2",
+                  "reps": "12/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB squat",
+                  "sets": "2",
+                  "reps": "5",
+                  "load": "157.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "BB zombie squat",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "52.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Pin good mornings",
+                  "sets": "2",
+                  "reps": "6",
+                  "load": "77",
+                  "rpe": ""
+                },
+                {
+                  "name": "Heavy sled/car push",
+                  "sets": "3",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": ""
+                }
+              ]
+            },
+            {
+              "day": "Day 3 - Upper",
+              "exercises": [
+                {
+                  "name": "Abducted external rotation",
+                  "sets": "2",
+                  "reps": "15/side",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "End range internal rotation",
+                  "sets": "2",
+                  "reps": "8/side",
+                  "load": "",
+                  "rpe": "8"
+                },
+                {
+                  "name": "Bench press",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "115.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Weighted pull up",
+                  "sets": "3",
+                  "reps": "3",
+                  "load": "#VALUE!",
+                  "rpe": ""
+                },
+                {
+                  "name": "Z press",
+                  "sets": "3",
+                  "reps": "8",
+                  "load": "28.3618125",
+                  "rpe": ""
+                },
+                {
+                  "name": "EZ skull crusher",
+                  "sets": "3",
+                  "reps": "6",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "DB hammer curl",
+                  "sets": "2",
+                  "reps": "8",
+                  "load": "0",
+                  "rpe": ""
+                },
+                {
+                  "name": "Tabata",
+                  "sets": "5",
+                  "reps": "20s sprint",
+                  "load": "",
+                  "rpe": "10"
+                }
+              ]
+            },
+            {
+              "day": "Day 4 - Lower",
+              "exercises": [
+                {
+                  "name": "Jefferson curls",
+                  "sets": "2",
+                  "reps": "10",
+                  "load": "",
+                  "rpe": "6"
+                },
+                {
+                  "name": "Deep squat holds",
+                  "sets": "2",
+                  "reps": "30s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Deadlift",
+                  "sets": "1",
+                  "reps": "3",
+                  "load": "210",
+                  "rpe": ""
+                },
+                {
+                  "name": "18\" deadlift",
+                  "sets": "2",
+                  "reps": "3",
+                  "load": "178.5",
+                  "rpe": ""
+                },
+                {
+                  "name": "Dead hanging",
+                  "sets": "2",
+                  "reps": "45s",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "SL glute bridges",
+                  "sets": "3",
+                  "reps": "15/side",
+                  "load": "BW",
+                  "rpe": ""
+                },
+                {
+                  "name": "Backwards sled walking",
+                  "sets": "5",
+                  "reps": "20m",
+                  "load": "",
+                  "rpe": "8"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

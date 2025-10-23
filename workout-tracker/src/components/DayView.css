@@ -1,0 +1,38 @@
+.day-view {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.day-title {
+  text-align: center;
+  font-size: 28px;
+  color: #ff4444;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .exercises-grid {
+    grid-template-columns: 1fr;
+  }
+}

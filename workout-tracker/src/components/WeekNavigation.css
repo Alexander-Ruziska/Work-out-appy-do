@@ -1,0 +1,81 @@
+.week-navigation-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.week-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(220, 20, 60, 0.4);
+}
+
+.nav-button {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+  border: 2px solid rgba(100, 100, 100, 0.4);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  min-width: 110px;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(40, 10, 10, 0.9) 0%, rgba(20, 5, 5, 0.95) 100%);
+  border-color: #ff4444;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.4);
+  color: white;
+}
+
+.nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: rgba(100, 100, 100, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.week-indicator {
+  text-align: center;
+  color: white;
+}
+
+.week-indicator h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.week-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #ff4444;
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 0 15px rgba(220, 20, 60, 0.8);
+  border-color: #ff4444;
+}

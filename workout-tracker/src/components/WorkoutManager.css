@@ -1,0 +1,306 @@
+.workout-manager-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.workout-manager {
+  background: linear-gradient(135deg, rgba(42, 10, 10, 0.95), rgba(10, 10, 10, 0.98));
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid rgba(255, 68, 68, 0.2);
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, rgba(42, 10, 10, 0.98), rgba(10, 10, 10, 0.98));
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.manager-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: white;
+}
+
+.close-btn {
+  background: rgba(255, 68, 68, 0.2);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 68, 68, 0.8);
+  transform: rotate(90deg);
+}
+
+.manager-actions {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  border-bottom: 1px solid rgba(255, 68, 68, 0.2);
+}
+
+.action-btn {
+  padding: 15px 25px;
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.8), rgba(220, 20, 60, 0.9));
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.4);
+  transform: translateY(-2px);
+}
+
+.new-btn {
+  background: linear-gradient(135deg, rgba(20, 100, 20, 0.6), rgba(10, 60, 10, 0.8));
+  border-color: rgba(100, 255, 100, 0.3);
+}
+
+.new-btn:hover {
+  background: linear-gradient(135deg, rgba(100, 255, 100, 0.8), rgba(60, 200, 60, 0.9));
+  border-color: rgba(100, 255, 100, 0.8);
+  box-shadow: 0 0 20px rgba(100, 255, 100, 0.4);
+  transform: translateY(-2px);
+}
+
+.dialog-box {
+  margin: 20px 30px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 6px;
+}
+
+.dialog-box h3 {
+  margin: 0 0 15px 0;
+  color: white;
+  font-size: 20px;
+}
+
+.dialog-box p {
+  margin: 0 0 15px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.dialog-box input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.dialog-box input:focus {
+  outline: none;
+  border-color: rgba(255, 68, 68, 0.6);
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.2);
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.8), rgba(220, 20, 60, 0.9));
+  border-color: rgba(255, 68, 68, 0.6);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.9), rgba(220, 20, 60, 1));
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: rgba(20, 20, 20, 0.8);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: rgba(40, 40, 40, 0.9);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.saved-workouts-section {
+  padding: 30px;
+}
+
+.saved-workouts-section h3 {
+  margin: 0 0 20px 0;
+  color: white;
+  font-size: 22px;
+}
+
+.no-workouts {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+.loading-message {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+.workouts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.workout-item {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 68, 68, 0.2);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.workout-item:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 68, 68, 0.4);
+  transform: translateX(5px);
+}
+
+.workout-info h4 {
+  margin: 0 0 8px 0;
+  color: white;
+  font-size: 18px;
+}
+
+.workout-meta {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+
+.workout-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-load,
+.btn-delete {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-load {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 0.95));
+  border-color: rgba(255, 68, 68, 0.3);
+  color: white;
+}
+
+.btn-load:hover {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.8), rgba(220, 20, 60, 0.9));
+  border-color: rgba(255, 68, 68, 0.8);
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background: rgba(100, 20, 20, 0.3);
+  border-color: rgba(255, 100, 100, 0.3);
+  color: rgba(255, 150, 150, 0.9);
+}
+
+.btn-delete:hover {
+  background: rgba(200, 50, 50, 0.6);
+  border-color: rgba(255, 100, 100, 0.6);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 100, 100, 0.3);
+}
+
+@media (max-width: 768px) {
+  .manager-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  .workout-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .workout-actions {
+    width: 100%;
+  }
+  
+  .btn-load,
+  .btn-delete {
+    flex: 1;
+  }
+}

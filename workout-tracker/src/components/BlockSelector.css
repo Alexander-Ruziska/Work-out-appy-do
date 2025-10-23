@@ -1,0 +1,97 @@
+.block-selector-container {
+  max-width: 1200px;
+  margin: 30px auto 20px;
+  padding: 0 20px;
+}
+
+.block-selector {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(220, 20, 60, 0.3);
+}
+
+.block-selector-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff4444;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.block-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  align-items: stretch;
+}
+
+.block-button {
+  background: linear-gradient(135deg, rgba(40, 40, 40, 0.6) 0%, rgba(20, 20, 20, 0.8) 100%);
+  backdrop-filter: blur(5px);
+  border: 3px solid rgba(100, 100, 100, 0.3);
+  border-radius: 6px;
+  padding: 25px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 140px;
+}
+
+.block-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
+  border-color: rgba(220, 20, 60, 0.6);
+  background: linear-gradient(135deg, rgba(60, 20, 20, 0.7) 0%, rgba(20, 20, 20, 0.9) 100%);
+}
+
+.block-button.active {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.8) 0%, rgba(80, 0, 0, 0.9) 100%);
+  border-color: #ff4444;
+  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.6), 0 0 30px rgba(220, 20, 60, 0.3);
+  transform: translateY(-4px);
+}
+
+.block-button.active .block-icon {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(255, 68, 68, 0.8));
+}
+
+.block-button.active .block-name,
+.block-button.active .block-weeks {
+  color: white;
+  text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+}
+
+.block-icon {
+  font-size: 36px;
+  transition: transform 0.3s ease;
+  filter: grayscale(20%);
+}
+
+.block-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.3s ease;
+}
+
+.block-weeks {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .block-buttons {
+    grid-template-columns: 1fr;
+  }
+}
