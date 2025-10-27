@@ -95,10 +95,9 @@ function WorkoutManager({ currentWorkout, onLoadWorkout, onClose }) {
     setNewWorkoutName('');
     setShowNewWorkoutDialog(false);
     
-    if (window.confirm(`New workout "${workoutToSave.name}" created! Load it now?`)) {
-      onLoadWorkout(newWorkout);
-      onClose();
-    }
+    // Automatically load the new workout and enter edit mode
+    onLoadWorkout(newWorkout, true); // true = isNewWorkout
+    onClose();
   };
 
   const formatDate = (isoString) => {

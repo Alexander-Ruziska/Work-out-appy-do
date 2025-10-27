@@ -1,0 +1,26 @@
+# fly.toml app configuration file generated for workout-tracker-wandering-feather-3608 on 2025-10-27T13:00:57-05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'workout-tracker-wandering-feather-3608'
+primary_region = 'ord'
+
+[build]
+  [build.args]
+    REACT_APP_SUPABASE_URL = "YOUR_SUPABASE_URL_HERE"
+    REACT_APP_SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY_HERE"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  max_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '256mb'
+  cpu_kind = 'shared'
+  cpus = 1

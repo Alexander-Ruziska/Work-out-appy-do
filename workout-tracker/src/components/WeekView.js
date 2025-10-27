@@ -29,19 +29,13 @@ function WeekView({ weekData, progressiveSettings, onOpenSettings }) {
             {day.day}
           </button>
         ))}
-        
-        <button 
-          className={`overload-indicator ${progressiveSettings?.isOverloadEnabled ? 'active' : ''}`}
-          onClick={handleOverloadToggle}
-          title={progressiveSettings?.isOverloadEnabled 
-            ? `Progressive Overload: +${progressiveSettings.overloadPercentage}% every ${progressiveSettings.overloadInterval} week(s)` 
-            : 'Enable Progressive Overload'}
-        >
-          <MdTrendingUp />
-        </button>
       </div>
 
-      <DayView dayData={weekData.days[selectedDay]} />
+      <DayView 
+        dayData={weekData.days[selectedDay]} 
+        progressiveSettings={progressiveSettings}
+        onOpenSettings={onOpenSettings}
+      />
     </div>
   );
 }

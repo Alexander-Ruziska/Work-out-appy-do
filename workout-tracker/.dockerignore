@@ -19,9 +19,6 @@
 .env.test.local
 .env.production.local
 
-# fly.io deployment config (contains build args)
-fly.toml
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

@@ -2,13 +2,68 @@
   animation: fadeIn 0.3s ease-in;
 }
 
+.day-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
 .day-title {
   text-align: center;
   font-size: 28px;
   color: #ff4444;
-  margin-bottom: 30px;
+  margin: 0;
   font-weight: 700;
   text-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+}
+
+.overload-toggle {
+  position: absolute;
+  left: 0;
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(100, 100, 100, 0.3);
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.overload-toggle svg {
+  font-size: 18px;
+}
+
+.toggle-text {
+  white-space: nowrap;
+}
+
+.overload-toggle:hover {
+  border-color: rgba(0, 188, 212, 0.6);
+  color: #00bcd4;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.overload-toggle.active {
+  background: linear-gradient(135deg, rgba(0, 100, 0, 0.8) 0%, rgba(0, 60, 0, 0.9) 100%);
+  border-color: #4caf50;
+  color: #4caf50;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.5), 0 0 20px rgba(76, 175, 80, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .exercises-grid {

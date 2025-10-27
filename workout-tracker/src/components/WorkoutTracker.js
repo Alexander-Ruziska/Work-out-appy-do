@@ -90,25 +90,62 @@ function WorkoutTracker({ initialData }) {
   };
 
   const handleSaveEdit = async (editedData) => {
-    setData(editedData);
-    setIsEditMode(false);
     await DB_SERVICE.saveCurrentWorkout(editedData, user.id);
-  };
-
-  const handleCancelEdit = () => {
+    // Reload from database to ensure we have the latest data
+    const reloadedData = await DB_SERVICE.loadCurrentWorkout(user.id);
+    setData(reloadedData || editedData);
     setIsEditMode(false);
   };
 
-  const handleLoadWorkout = async (workoutData) => {
+  const handleCancelEdit = async () => {
+    // Reload from database to discard any unsaved changes
+    const reloadedData = await DB_SERVICE.loadCurrentWorkout(user.id);
+    if (reloadedData) {
+      setData(reloadedData);
+    }
+    setIsEditMode(false);
+  };
+
+  const handleLoadWorkout = async (workoutData, isNewWorkout = false) => {
     setData(workoutData);
     setCurrentBlock(0);
     setCurrentWeek(0);
     await DB_SERVICE.saveCurrentWorkout(workoutData, user.id);
+    
+    // For new workouts, disable progressive overload and enter edit mode
+    if (isNewWorkout) {
+      const disabledSettings = {
+        isOverloadEnabled: false,
+        overloadPercentage: 4,
+        overloadInterval: 1,
+        resetOnBlockChange: false
+      };
+      setProgressiveSettings(disabledSettings);
+      await DB_SERVICE.saveProgressiveSettings(disabledSettings);
+      setIsEditMode(true);
+    }
   };
 
   const handleSaveSettings = async (newSettings) => {
+    const wasEnabled = progressiveSettings.isOverloadEnabled;
+    const isNowEnabled = newSettings.isOverloadEnabled;
+    
     setProgressiveSettings(newSettings);
     await DB_SERVICE.saveProgressiveSettings(newSettings);
+    
+    // If progressive overload was just enabled, enter edit mode to show review
+    if (!wasEnabled && isNowEnabled) {
+      setShowSettings(false);
+      setIsEditMode(true);
+    }
+  };
+
+  const handleEnableWithReview = async (newSettings) => {
+    // Save settings and immediately enter edit mode
+    setProgressiveSettings(newSettings);
+    await DB_SERVICE.saveProgressiveSettings(newSettings);
+    setShowSettings(false);
+    setIsEditMode(true);
   };
 
   if (isEditMode) {
@@ -158,6 +195,7 @@ function WorkoutTracker({ initialData }) {
           settings={progressiveSettings}
           onSave={handleSaveSettings}
           onClose={() => setShowSettings(false)}
+          onEnableWithReview={handleEnableWithReview}
         />
       )}
 

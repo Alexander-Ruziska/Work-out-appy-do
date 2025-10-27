@@ -14,6 +14,34 @@ function EditMode({ workoutData, onSave, onCancel, progressiveSettings, onSaveSe
   const [editingDayIndex, setEditingDayIndex] = useState(null);
   const [showSettings, setShowSettings] = useState(false);
 
+  // Handler for when progressive overload is enabled/disabled in settings modal
+  const handleEnableWithReview = (newSettings) => {
+    // Save settings
+    onSaveSettings(newSettings);
+    setShowSettings(false);
+    
+    const originalData = JSON.parse(JSON.stringify(editedData));
+    let filledData;
+    
+    // If enabling progressive overload, apply it
+    if (newSettings.isOverloadEnabled && !progressiveSettings?.isOverloadEnabled) {
+      filledData = applyProgressiveOverload(editedData, 0, 0, newSettings);
+    } 
+    // If disabling progressive overload, reset to baseline
+    else if (!newSettings.isOverloadEnabled && progressiveSettings?.isOverloadEnabled) {
+      filledData = resetLoadsToBaseline(editedData);
+    }
+    else {
+      return; // No change in enabled state
+    }
+    
+    const changes = detectChanges(originalData, filledData);
+    if (changes.length > 0) {
+      setAutoFillChanges(changes);
+      setShowAutoFillReview(true);
+    }
+  };
+
   // Apply progressive overload on initial load if enabled
   useEffect(() => {
     if (progressiveSettings?.isOverloadEnabled && !hasReviewedAutoFill) {
@@ -29,7 +57,7 @@ function EditMode({ workoutData, onSave, onCancel, progressiveSettings, onSaveSe
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Only run once on mount
+  }, [progressiveSettings?.isOverloadEnabled]); // Re-run when progressive overload is toggled
 
   // Helper: Find the previous exercise load for progression calculation
   const findPreviousLoad = (blockIndex, weekNumber, dayIndex, exerciseIndex) => {
@@ -72,10 +100,11 @@ function EditMode({ workoutData, onSave, onCancel, progressiveSettings, onSaveSe
   };
 
   // Apply progressive overload to all future weeks based on exercise names
-  const applyProgressiveOverload = (data, fromBlockIndex = 0, fromWeekIndex = 0) => {
-    if (!progressiveSettings?.isOverloadEnabled) return data;
+  const applyProgressiveOverload = (data, fromBlockIndex = 0, fromWeekIndex = 0, settingsOverride = null) => {
+    const settings = settingsOverride || progressiveSettings;
+    if (!settings?.isOverloadEnabled) return data;
 
-    const { overloadPercentage, overloadInterval, resetOnBlockChange } = progressiveSettings;
+    const { overloadPercentage, overloadInterval, resetOnBlockChange } = settings;
     const newData = JSON.parse(JSON.stringify(data));
     const exerciseHistory = {};
 
@@ -127,11 +156,17 @@ function EditMode({ workoutData, onSave, onCancel, progressiveSettings, onSaveSe
                 const multiplier = Math.pow(1 + overloadPercentage / 100, weeksDiff / overloadInterval);
                 const newLoad = (history.load * multiplier).toFixed(1);
                 exercise.load = newLoad;
-                exerciseHistory[key] = { blockIdx, weekIdx, dayIdx, load: parseFloat(newLoad), exerciseIdx };
+                // Don't update history - keep the original baseline for all calculations
               } 
-              // Between intervals, maintain previous load
-              else if (weeksDiff > 0 && weeksDiff < overloadInterval) {
-                exercise.load = history.load.toString();
+              // Between intervals, copy the most recent calculated load
+              else if (weeksDiff > 0) {
+                // Find the most recent week that should have gotten an overload
+                const lastOverloadWeek = Math.floor(weeksDiff / overloadInterval) * overloadInterval;
+                if (lastOverloadWeek > 0) {
+                  const multiplier = Math.pow(1 + overloadPercentage / 100, lastOverloadWeek / overloadInterval);
+                  const maintainLoad = (history.load * multiplier).toFixed(1);
+                  exercise.load = maintainLoad;
+                }
               }
             }
           });
@@ -171,6 +206,50 @@ function EditMode({ workoutData, onSave, onCancel, progressiveSettings, onSaveSe
     });
     
     return changes;
+  };
+
+  // Reset loads back to baseline week when disabling progressive overload
+  const resetLoadsToBaseline = (data) => {
+    const newData = JSON.parse(JSON.stringify(data));
+
+    // Process each block independently
+    newData.blocks.forEach((block, blockIdx) => {
+      const exerciseBaselines = {};
+
+      // First pass: collect baseline loads from this block's Week 1
+      if (block.weeks[0]) {
+        block.weeks[0].days.forEach((day, dayIdx) => {
+          day.exercises.forEach((exercise) => {
+            const exerciseName = exercise.name?.trim().toLowerCase();
+            if (exerciseName && exercise.load) {
+              const key = `${exerciseName}_day${dayIdx}`;
+              exerciseBaselines[key] = exercise.load;
+            }
+          });
+        });
+      }
+
+      // Second pass: apply baseline loads to all weeks except Week 1 in this block
+      block.weeks.forEach((week, weekIdx) => {
+        if (weekIdx === 0) return; // Skip Week 1 (baseline)
+        
+        week.days.forEach((day, dayIdx) => {
+          day.exercises.forEach((exercise) => {
+            const exerciseName = exercise.name?.trim().toLowerCase();
+            if (exerciseName) {
+              const key = `${exerciseName}_day${dayIdx}`;
+              const baseline = exerciseBaselines[key];
+              
+              if (baseline) {
+                exercise.load = baseline;
+              }
+            }
+          });
+        });
+      });
+    });
+
+    return newData;
   };
 
   // Handle accepting auto-fill changes
@@ -367,6 +446,7 @@ function EditMode({ workoutData, onSave, onCancel, progressiveSettings, onSaveSe
             setShowSettings(false);
           }}
           onClose={() => setShowSettings(false)}
+          onEnableWithReview={handleEnableWithReview}
         />
       )}
 
