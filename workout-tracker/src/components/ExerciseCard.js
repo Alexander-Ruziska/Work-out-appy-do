@@ -34,12 +34,10 @@ function ExerciseCard({ exercise, index }) {
           <span className="detail-value">{exercise.load || '-'}</span>
         </div>
         
-        {exercise.rpe && exercise.rpe !== 'nan' && (
-          <div className="detail-item">
-            <span className="detail-label">RPE</span>
-            <span className="detail-value">{exercise.rpe}</span>
-          </div>
-        )}
+        <div className="detail-item">
+          <span className="detail-label">RPE</span>
+          <span className="detail-value">{exercise.rpe && exercise.rpe !== 'nan' ? exercise.rpe : '-'}</span>
+        </div>
       </div>
     </div>
   );

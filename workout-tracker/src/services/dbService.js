@@ -224,6 +224,65 @@ const DB_SERVICE = {
       localStorage.setItem('savedWorkouts', JSON.stringify(workouts));
       return true;
     }
+  },
+
+  // Save progressive overload settings
+  saveProgressiveSettings: async (settings) => {
+    const deviceId = DB_SERVICE.getDeviceId();
+    
+    if (DB_SERVICE.isSupabaseConfigured()) {
+      try {
+        const { error } = await supabase
+          .from('progressive_settings')
+          .upsert({
+            device_id: deviceId,
+            settings: settings,
+            updated_at: new Date().toISOString()
+          }, {
+            onConflict: 'device_id'
+          });
+
+        if (error) throw error;
+        console.log('Progressive settings saved to Supabase');
+        return true;
+      } catch (error) {
+        console.error('Supabase save settings failed, falling back to localStorage:', error);
+        localStorage.setItem('progressiveSettings', JSON.stringify(settings));
+        return false;
+      }
+    } else {
+      // Fallback to localStorage
+      localStorage.setItem('progressiveSettings', JSON.stringify(settings));
+      return true;
+    }
+  },
+
+  // Load progressive overload settings
+  loadProgressiveSettings: async () => {
+    const deviceId = DB_SERVICE.getDeviceId();
+    
+    if (DB_SERVICE.isSupabaseConfigured()) {
+      try {
+        const { data, error } = await supabase
+          .from('progressive_settings')
+          .select('settings')
+          .eq('device_id', deviceId)
+          .single();
+
+        if (error && error.code !== 'PGRST116') throw error;
+        
+        if (data && data.settings) {
+          console.log('Loaded progressive settings from Supabase');
+          return data.settings;
+        }
+      } catch (error) {
+        console.error('Supabase load settings failed, falling back to localStorage:', error);
+      }
+    }
+    
+    // Fallback to localStorage
+    const saved = localStorage.getItem('progressiveSettings');
+    return saved ? JSON.parse(saved) : null;
   }
 };
 

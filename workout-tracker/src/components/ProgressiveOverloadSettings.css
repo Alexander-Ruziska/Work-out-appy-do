@@ -1,0 +1,259 @@
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.settings-modal {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.98) 0%, rgba(10, 10, 10, 0.99) 100%);
+  border: 2px solid rgba(255, 68, 68, 0.3);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 68, 68, 0.2);
+}
+
+.settings-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff4444;
+  transform: rotate(90deg);
+}
+
+.settings-content {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.setting-group {
+  margin-bottom: 24px;
+}
+
+.setting-group label {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #ff4444;
+}
+
+.toggle-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input-with-unit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.input-with-unit input {
+  flex: 1;
+  padding: 10px 14px;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.input-with-unit input:focus {
+  outline: none;
+  border-color: #ff4444;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+}
+
+.unit {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  min-width: 60px;
+}
+
+.hint {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.preview-section {
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+.preview-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff4444;
+  margin: 0 0 12px 0;
+}
+
+.preview-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+.preview-text strong {
+  color: #ff4444;
+  font-weight: 700;
+}
+
+.preview-formula {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+}
+
+.settings-footer {
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255, 68, 68, 0.2);
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cancel-btn {
+  background: rgba(50, 50, 50, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cancel-btn:hover {
+  background: rgba(70, 70, 70, 0.9);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+  color: white;
+  border: 1px solid rgba(255, 68, 68, 0.5);
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #ff5555 0%, #dd0000 100%);
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .settings-modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .settings-header h2 {
+    font-size: 20px;
+  }
+
+  .settings-content {
+    padding: 16px;
+  }
+
+  .settings-footer {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .save-btn {
+    width: 100%;
+  }
+}

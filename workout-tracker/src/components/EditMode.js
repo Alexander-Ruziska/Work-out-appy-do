@@ -1,11 +1,233 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './EditMode.css';
+import AutoFillReview from './AutoFillReview';
 
-function EditMode({ workoutData, onSave, onCancel }) {
+function EditMode({ workoutData, onSave, onCancel, progressiveSettings, currentBlock: initialBlock }) {
   const [editedData, setEditedData] = useState(JSON.parse(JSON.stringify(workoutData)));
-  const [selectedBlock, setSelectedBlock] = useState(0);
+  const [selectedBlock, setSelectedBlock] = useState(initialBlock || 0);
   const [selectedWeek, setSelectedWeek] = useState(0);
   const [selectedDay, setSelectedDay] = useState(0);
+  const [showAutoFillReview, setShowAutoFillReview] = useState(false);
+  const [autoFillChanges, setAutoFillChanges] = useState([]);
+  const [hasReviewedAutoFill, setHasReviewedAutoFill] = useState(false);
+  const [editingDayIndex, setEditingDayIndex] = useState(null);
+
+  // Apply progressive overload on initial load if enabled
+  useEffect(() => {
+    if (progressiveSettings?.isOverloadEnabled && !hasReviewedAutoFill) {
+      const originalData = JSON.parse(JSON.stringify(workoutData));
+      const filledData = applyProgressiveOverload(editedData);
+      
+      // Calculate what changed
+      const changes = detectChanges(originalData, filledData);
+      
+      if (changes.length > 0) {
+        setAutoFillChanges(changes);
+        setShowAutoFillReview(true);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Only run once on mount
+
+  // Calculate suggested load based on progressive overload settings
+  const calculateSuggestedLoad = (blockIndex, weekNumber, dayIndex, exerciseIndex) => {
+    if (!progressiveSettings?.isOverloadEnabled) return null;
+
+    const { overloadPercentage, overloadInterval, resetOnBlockChange } = progressiveSettings;
+    
+    // If we should reset on block change and we're not in the first block
+    if (resetOnBlockChange && blockIndex > 0) {
+      // Look for the same exercise in the same week/day of this block
+      if (weekNumber === 0) return null; // First week of block, no suggestion
+      const prevWeek = editedData.blocks[blockIndex].weeks[weekNumber - overloadInterval];
+      if (!prevWeek) return null;
+      
+      const prevExercise = prevWeek.days[dayIndex]?.exercises[exerciseIndex];
+      if (!prevExercise || !prevExercise.load) return null;
+      
+      const prevLoad = parseFloat(prevExercise.load);
+      if (isNaN(prevLoad)) return null;
+      
+      return (prevLoad * (1 + overloadPercentage / 100)).toFixed(1);
+    } else {
+      // Look across all previous weeks in all blocks
+      let weeksBack = overloadInterval;
+      let currentBlockIdx = blockIndex;
+      let currentWeekIdx = weekNumber - weeksBack;
+      
+      // Navigate backwards through blocks if needed
+      while (currentWeekIdx < 0 && currentBlockIdx > 0) {
+        currentBlockIdx--;
+        const prevBlockWeeks = editedData.blocks[currentBlockIdx]?.weeks.length || 0;
+        currentWeekIdx += prevBlockWeeks;
+      }
+      
+      // If we went too far back, no suggestion
+      if (currentWeekIdx < 0 || currentBlockIdx < 0) return null;
+      
+      const prevWeek = editedData.blocks[currentBlockIdx]?.weeks[currentWeekIdx];
+      if (!prevWeek) return null;
+      
+      const prevExercise = prevWeek.days[dayIndex]?.exercises[exerciseIndex];
+      if (!prevExercise || !prevExercise.load) return null;
+      
+      const prevLoad = parseFloat(prevExercise.load);
+      if (isNaN(prevLoad)) return null;
+      
+      return (prevLoad * (1 + overloadPercentage / 100)).toFixed(1);
+    }
+  };
+
+  // Apply progressive overload to all future weeks based on exercise names
+  const applyProgressiveOverload = (data, fromBlockIndex = 0, fromWeekIndex = 0) => {
+    if (!progressiveSettings?.isOverloadEnabled) return data;
+
+    const { overloadPercentage, overloadInterval, resetOnBlockChange } = progressiveSettings;
+    const newData = JSON.parse(JSON.stringify(data));
+
+    // Build a map of exercise loads: { "Bench Press": { blockIdx: 0, weekIdx: 2, dayIdx: 0, load: 105 }, ... }
+    const exerciseHistory = {};
+
+    console.log('🔄 Starting Progressive Overload Calculation');
+    console.log('Settings:', { overloadPercentage, overloadInterval, resetOnBlockChange });
+
+    // First pass: identify Week 1 exercises with loads (these are our baseline)
+    // Process each block
+    newData.blocks.forEach((block, blockIdx) => {
+      // Reset history if we're starting a new block and resetOnBlockChange is true
+      if (resetOnBlockChange && blockIdx > 0) {
+        Object.keys(exerciseHistory).forEach(key => delete exerciseHistory[key]);
+      }
+
+      block.weeks.forEach((week, weekIdx) => {
+        // Determine if this is a "baseline" week (Week 1, or first week of block if reset on block change)
+        const isBaselineWeek = resetOnBlockChange ? (weekIdx === 0) : (blockIdx === 0 && weekIdx === 0);
+
+        week.days.forEach((day, dayIdx) => {
+          day.exercises.forEach((exercise, exerciseIdx) => {
+            const exerciseName = exercise.name?.trim().toLowerCase();
+            if (!exerciseName) return;
+
+            // Key includes both exercise name AND day index to track exercises per day
+            const key = `${exerciseName}_day${dayIdx}`;
+            const hasManualLoad = exercise.load && exercise.load.trim() !== '';
+
+            console.log(`📊 Block ${blockIdx} Week ${weekIdx} Day ${dayIdx} "${exerciseName}": load="${exercise.load}", hasManualLoad=${hasManualLoad}, isBaseline=${isBaselineWeek}`);
+
+            console.log(`📊 Block ${blockIdx} Week ${weekIdx} Day ${dayIdx} "${exerciseName}": load="${exercise.load}", hasManualLoad=${hasManualLoad}, isBaseline=${isBaselineWeek}`);
+
+            // If this is a baseline week and has a manual load, store it as the starting point
+            if (isBaselineWeek && hasManualLoad) {
+              const load = parseFloat(exercise.load);
+              if (!isNaN(load)) {
+                console.log(`✅ Storing ${key} as baseline: ${load} lbs (week ${weekIdx})`);
+                // Store the complete exercise data, not just the load
+                exerciseHistory[key] = {
+                  blockIdx,
+                  weekIdx,
+                  dayIdx,
+                  load,
+                  exerciseIdx,
+                  baselineExercise: { ...exercise } // Store complete exercise data
+                };
+              }
+            } else if (!isBaselineWeek && exerciseHistory[key]) {
+              // This is a future week and we have a baseline - calculate progressive overload
+              const history = exerciseHistory[key];
+              
+              // Calculate weeks between
+              let weeksDiff = weekIdx - history.weekIdx;
+              if (blockIdx !== history.blockIdx) {
+                // Add up weeks from previous blocks
+                for (let b = history.blockIdx; b < blockIdx; b++) {
+                  weeksDiff += newData.blocks[b].weeks.length;
+                }
+                weeksDiff -= history.weekIdx;
+                weeksDiff += weekIdx;
+              }
+
+              console.log(`🧮 Calculating for ${key}: weeksDiff=${weeksDiff}, interval=${overloadInterval}, history.load=${history.load}`);
+
+              // Apply progressive overload regardless of whether there's already a load
+              // (This will OVERWRITE existing loads)
+              if (weeksDiff > 0 && weeksDiff % overloadInterval === 0) {
+                const multiplier = Math.pow(1 + overloadPercentage / 100, weeksDiff / overloadInterval);
+                const newLoad = (history.load * multiplier).toFixed(1);
+                console.log(`🚀 AUTO-FILL: ${key} = ${newLoad} lbs (was ${history.load}, multiplier=${multiplier.toFixed(2)}, OVERWRITING existing: "${exercise.load}")`);
+                exercise.load = newLoad;
+
+                // Update history with this new auto-filled load
+                exerciseHistory[key] = {
+                  blockIdx,
+                  weekIdx,
+                  dayIdx,
+                  load: parseFloat(newLoad),
+                  exerciseIdx
+                };
+              } else if (weeksDiff > 0 && weeksDiff < overloadInterval) {
+                // Between intervals, keep the same load
+                exercise.load = history.load.toString();
+              }
+            }
+          });
+        });
+      });
+    });
+
+    return newData;
+  };
+
+  // Detect what changed between original and auto-filled data
+  const detectChanges = (originalData, newData) => {
+    const changes = [];
+    
+    newData.blocks.forEach((block, blockIdx) => {
+      block.weeks.forEach((week, weekIdx) => {
+        week.days.forEach((day, dayIdx) => {
+          day.exercises.forEach((exercise, exerciseIdx) => {
+            const originalExercise = originalData.blocks[blockIdx]?.weeks[weekIdx]?.days[dayIdx]?.exercises[exerciseIdx];
+            
+            if (originalExercise && exercise.load && exercise.load !== originalExercise.load) {
+              changes.push({
+                blockIdx,
+                weekIdx,
+                dayIdx,
+                exerciseIdx,
+                blockName: block.name,
+                dayName: day.day,
+                exerciseName: exercise.name,
+                oldValue: originalExercise.load,
+                newValue: exercise.load
+              });
+            }
+          });
+        });
+      });
+    });
+    
+    return changes;
+  };
+
+  // Handle accepting auto-fill changes
+  const handleAcceptAutoFill = (acceptedChanges) => {
+    const newData = JSON.parse(JSON.stringify(editedData));
+    
+    acceptedChanges.forEach(change => {
+      newData.blocks[change.blockIdx].weeks[change.weekIdx].days[change.dayIdx]
+        .exercises[change.exerciseIdx].load = change.newValue;
+    });
+    
+    setEditedData(newData);
+    setShowAutoFillReview(false);
+    setHasReviewedAutoFill(true);
+  };
+
+  // Handle rejecting auto-fill
+  const handleRejectAutoFill = () => {
+    setShowAutoFillReview(false);
+    setHasReviewedAutoFill(true);
+    // Keep original data without auto-fill
+  };
 
   // Add new block
   const addBlock = () => {
@@ -135,7 +357,31 @@ function EditMode({ workoutData, onSave, onCancel }) {
   const updateExercise = (blockIndex, weekIndex, dayIndex, exerciseIndex, field, value) => {
     const newBlocks = [...editedData.blocks];
     newBlocks[blockIndex].weeks[weekIndex].days[dayIndex].exercises[exerciseIndex][field] = value;
-    setEditedData({ ...editedData, blocks: newBlocks });
+    let updatedData = { ...editedData, blocks: newBlocks };
+    
+    // If user changed load or exercise name, recalculate progressive overload for future weeks
+    if ((field === 'load' || field === 'name') && progressiveSettings?.isOverloadEnabled && hasReviewedAutoFill) {
+      const beforeRecalc = JSON.parse(JSON.stringify(updatedData));
+      updatedData = applyProgressiveOverload(updatedData, blockIndex, weekIndex);
+      
+      // Show what will change (for future weeks only, after the current one)
+      const changes = detectChanges(beforeRecalc, updatedData).filter(change => {
+        // Only show changes for weeks after the current one being edited
+        if (change.blockIdx > blockIndex) return true;
+        if (change.blockIdx === blockIndex && change.weekIdx > weekIndex) return true;
+        return false;
+      });
+      
+      if (changes.length > 0) {
+        setAutoFillChanges(changes);
+        setShowAutoFillReview(true);
+        // Don't apply yet, wait for user confirmation
+        setEditedData({ ...editedData, blocks: newBlocks }); // Only apply the immediate change
+        return;
+      }
+    }
+    
+    setEditedData(updatedData);
   };
 
   const handleSave = () => {
@@ -148,6 +394,14 @@ function EditMode({ workoutData, onSave, onCancel }) {
 
   return (
     <div className="edit-mode-overlay">
+      {showAutoFillReview && (
+        <AutoFillReview
+          changes={autoFillChanges}
+          onAccept={handleAcceptAutoFill}
+          onReject={handleRejectAutoFill}
+        />
+      )}
+      
       <div className="edit-mode-container">
         <div className="edit-mode-header">
           <h2>🔧 Edit Mode</h2>
@@ -156,6 +410,14 @@ function EditMode({ workoutData, onSave, onCancel }) {
             <button className="cancel-button" onClick={onCancel}>✕ Cancel</button>
           </div>
         </div>
+
+        {progressiveSettings?.isOverloadEnabled && hasReviewedAutoFill && (
+          <div className="progressive-notice">
+            <span className="notice-icon">🤖</span>
+            <strong>Progressive Overload Active:</strong> When you change loads, future weeks will be suggested for auto-calculation at +{progressiveSettings.overloadPercentage}% every {progressiveSettings.overloadInterval} week{progressiveSettings.overloadInterval > 1 ? 's' : ''}. 
+            You'll review changes before they're applied.
+          </div>
+        )}
 
         <div className="edit-mode-content">
           {/* Blocks Section */}
@@ -230,14 +492,30 @@ function EditMode({ workoutData, onSave, onCancel }) {
                 <div 
                   key={dayIndex} 
                   className={`day-item ${selectedDay === dayIndex ? 'active' : ''}`}
-                  onClick={() => setSelectedDay(dayIndex)}
+                  onClick={() => {
+                    setSelectedDay(dayIndex);
+                    setEditingDayIndex(null); // Stop editing when selecting
+                  }}
+                  onDoubleClick={(e) => {
+                    e.stopPropagation();
+                    setEditingDayIndex(dayIndex);
+                  }}
                 >
-                  <input
-                    type="text"
-                    value={day.day}
-                    onChange={(e) => updateDayName(selectedBlock, selectedWeek, dayIndex, e.target.value)}
-                    onClick={(e) => e.stopPropagation()}
-                  />
+                  {editingDayIndex === dayIndex ? (
+                    <input
+                      type="text"
+                      value={day.day}
+                      onChange={(e) => updateDayName(selectedBlock, selectedWeek, dayIndex, e.target.value)}
+                      onBlur={() => setEditingDayIndex(null)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') setEditingDayIndex(null);
+                      }}
+                      autoFocus
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                  ) : (
+                    <span className="day-name">{day.day}</span>
+                  )}
                   <button 
                     className="delete-btn-small"
                     onClick={(e) => {
@@ -304,7 +582,15 @@ function EditMode({ workoutData, onSave, onCancel }) {
                           type="text"
                           value={exercise.load}
                           onChange={(e) => updateExercise(selectedBlock, selectedWeek, selectedDay, exerciseIndex, 'load', e.target.value)}
+                          placeholder={calculateSuggestedLoad(selectedBlock, selectedWeek, selectedDay, exerciseIndex) ? 
+                            `Suggested: ${calculateSuggestedLoad(selectedBlock, selectedWeek, selectedDay, exerciseIndex)}` : 
+                            'Enter load'}
                         />
+                        {!exercise.load && calculateSuggestedLoad(selectedBlock, selectedWeek, selectedDay, exerciseIndex) && (
+                          <small className="load-hint">
+                            💡 Progressive overload: {calculateSuggestedLoad(selectedBlock, selectedWeek, selectedDay, exerciseIndex)} lbs
+                          </small>
+                        )}
                       </div>
                       <div className="field-group">
                         <label>RPE</label>

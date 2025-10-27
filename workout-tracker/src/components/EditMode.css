@@ -78,6 +78,36 @@
   box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
 }
 
+.progressive-notice {
+  background: linear-gradient(135deg, rgba(34, 139, 34, 0.2) 0%, rgba(0, 100, 0, 0.3) 100%);
+  border: 2px solid rgba(34, 139, 34, 0.5);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 0 30px 20px 30px;
+  color: #90EE90;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideDown 0.3s ease;
+}
+
+.notice-icon {
+  font-size: 20px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .edit-mode-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -299,6 +329,52 @@
   outline: none;
   border-color: #ff4444;
   box-shadow: 0 0 10px rgba(220, 20, 60, 0.3);
+}
+
+.load-hint {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #90EE90;
+  font-weight: 600;
+  animation: fadeInPulse 0.5s ease;
+}
+
+.auto-badge {
+  margin-left: 6px;
+  font-size: 12px;
+  opacity: 0.8;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.field-group input.auto-filled {
+  border-color: rgba(34, 139, 34, 0.5);
+  background: rgba(34, 139, 34, 0.05);
+}
+
+.field-group input.auto-filled:focus {
+  border-color: #90EE90;
+  box-shadow: 0 0 10px rgba(34, 139, 34, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes fadeInPulse {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .no-exercises {
