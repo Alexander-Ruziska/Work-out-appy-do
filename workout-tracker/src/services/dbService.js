@@ -36,7 +36,6 @@ const DB_SERVICE = {
           });
 
         if (error) throw error;
-        console.log('Saved to Supabase');
         return true;
       } catch (error) {
         console.error('Supabase save failed, falling back to localStorage:', error);
@@ -65,7 +64,6 @@ const DB_SERVICE = {
         if (error && error.code !== 'PGRST116') throw error; // PGRST116 is "not found"
         
         if (data && data.workout_data) {
-          console.log('Loaded from Supabase');
           return data.workout_data;
         }
       } catch (error) {
@@ -95,7 +93,6 @@ const DB_SERVICE = {
           });
 
         if (error) throw error;
-        console.log('Workout saved to Supabase');
         return true;
       } catch (error) {
         console.error('Supabase save failed, falling back to localStorage:', error);
@@ -131,7 +128,6 @@ const DB_SERVICE = {
         if (error) throw error;
         
         if (data) {
-          console.log('Loaded workouts from Supabase');
           // Convert to the format expected by the app
           return data.map(row => ({
             id: row.workout_id,
@@ -163,7 +159,6 @@ const DB_SERVICE = {
           .eq('workout_id', workoutId);
 
         if (error) throw error;
-        console.log('Workout deleted from Supabase');
         return true;
       } catch (error) {
         console.error('Supabase delete failed, falling back to localStorage:', error);
@@ -212,7 +207,6 @@ const DB_SERVICE = {
           })));
 
         if (error) throw error;
-        console.log('All workouts updated in Supabase');
         return true;
       } catch (error) {
         console.error('Supabase update failed, falling back to localStorage:', error);
@@ -243,7 +237,6 @@ const DB_SERVICE = {
           });
 
         if (error) throw error;
-        console.log('Progressive settings saved to Supabase');
         return true;
       } catch (error) {
         console.error('Supabase save settings failed, falling back to localStorage:', error);
@@ -272,7 +265,6 @@ const DB_SERVICE = {
         if (error && error.code !== 'PGRST116') throw error;
         
         if (data && data.settings) {
-          console.log('Loaded progressive settings from Supabase');
           return data.settings;
         }
       } catch (error) {

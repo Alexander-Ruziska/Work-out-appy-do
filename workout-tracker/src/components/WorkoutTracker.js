@@ -7,7 +7,7 @@ import EditMode from './EditMode';
 import WorkoutManager from './WorkoutManager';
 import ProgressiveOverloadSettings from './ProgressiveOverloadSettings';
 import DB_SERVICE from '../services/dbService';
-import { BiListUl, BiEditAlt, BiCog } from 'react-icons/bi';
+import { BiListUl, BiEditAlt } from 'react-icons/bi';
 import { AiOutlinePushpin } from 'react-icons/ai';
 import useStore from '../zustand/store';
 
@@ -35,13 +35,10 @@ function WorkoutTracker({ initialData }) {
   useEffect(() => {
     const loadData = async () => {
       try {
-        console.log('Starting to load data for user:', user.id);
         const savedData = await DB_SERVICE.loadCurrentWorkout(user.id);
-        console.log('Loaded saved data:', savedData);
         if (savedData) {
           setData(savedData);
         } else {
-          console.log('No saved data, using initial workout data');
           // First time loading - save the initial workout
           await DB_SERVICE.saveCurrentWorkout(initialData, user.id);
           
@@ -66,7 +63,6 @@ function WorkoutTracker({ initialData }) {
       } catch (error) {
         console.error('Error loading data:', error);
       } finally {
-        console.log('Setting loading to false');
         setIsLoading(false);
       }
     };
@@ -121,6 +117,7 @@ function WorkoutTracker({ initialData }) {
       onSave={handleSaveEdit} 
       onCancel={handleCancelEdit}
       progressiveSettings={progressiveSettings}
+      onSaveSettings={handleSaveSettings}
       currentBlock={currentBlock}
     />;
   }
@@ -172,10 +169,6 @@ function WorkoutTracker({ initialData }) {
             <BiListUl style={{ marginRight: '8px', fontSize: '18px', verticalAlign: 'middle' }} />
             Workouts
           </button>
-          <button className="header-btn settings-btn" onClick={() => setShowSettings(true)}>
-            <BiCog style={{ marginRight: '8px', fontSize: '18px', verticalAlign: 'middle' }} />
-            Settings
-          </button>
           <button className="header-btn edit-btn" onClick={() => setIsEditMode(true)}>
             <BiEditAlt style={{ marginRight: '8px', fontSize: '18px', verticalAlign: 'middle' }} />
             Edit
@@ -189,13 +182,6 @@ function WorkoutTracker({ initialData }) {
         onBlockChange={handleBlockChange}
       />
       
-      {progressiveSettings.isOverloadEnabled && (
-        <div className="overload-badge">
-          <span className="badge-icon">📈</span>
-          Progressive Overload: +{progressiveSettings.overloadPercentage}% every {progressiveSettings.overloadInterval} week{progressiveSettings.overloadInterval > 1 ? 's' : ''}
-        </div>
-      )}
-      
       <WeekNavigation
         currentWeek={currentWeek + 1}
         totalWeeks={totalWeeks}
@@ -205,7 +191,11 @@ function WorkoutTracker({ initialData }) {
         canGoNext={currentWeek < totalWeeks - 1}
       />
 
-      <WeekView weekData={data.blocks[currentBlock].weeks[currentWeek]} />
+      <WeekView 
+        weekData={data.blocks[currentBlock].weeks[currentWeek]} 
+        progressiveSettings={progressiveSettings}
+        onOpenSettings={() => setShowSettings(true)}
+      />
 
       <footer className="workout-footer">
         <div className="notes-section">

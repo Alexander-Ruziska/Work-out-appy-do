@@ -44,7 +44,8 @@
 }
 
 .save-button,
-.cancel-button {
+.cancel-button,
+.settings-button {
   padding: 12px 24px;
   border-radius: 4px;
   font-size: 16px;
@@ -52,6 +53,18 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid;
+}
+
+.settings-button {
+  background: linear-gradient(135deg, rgba(0, 100, 139, 0.8) 0%, rgba(0, 60, 100, 0.9) 100%);
+  border-color: rgba(0, 188, 212, 0.6);
+  color: white;
+}
+
+.settings-button:hover {
+  background: linear-gradient(135deg, rgba(0, 120, 160, 0.9) 0%, rgba(0, 80, 120, 1) 100%);
+  border-color: #00bcd4;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
 }
 
 .save-button {
@@ -218,6 +231,16 @@
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.day-item .day-name {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .week-item span {
